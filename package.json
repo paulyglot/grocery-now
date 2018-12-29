@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/paulyglot/grocery-list/issues"
   },
-  "homepage": "https://github.com/paulyglot/grocery-list#readme"
+  "homepage": "https://github.com/paulyglot/grocery-list#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.1.6"
+  }
 }
