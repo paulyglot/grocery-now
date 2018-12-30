@@ -26,7 +26,7 @@ const userSchema = mongoose.Schema({
         required: true,
         maxlength:50
     },
-    item:{
+    cart:{
         type:Array,
         default: []
     },

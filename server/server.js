@@ -19,9 +19,92 @@ app.use(cookieParser());
 
 //Models
 const { User } = require('./models/user');
+const { Grocery } = require('./models/grocery');
+const { Company } = require('./models/company');
+const { Product } = require('./models/product');
 
 //Middlewares
 const { auth } = require('./middleware/auth');
+const { admin } = require('./middleware/admin');
+
+////////////////PRODUCTS//////////////
+
+app.get('/api/product/articles_by_id',(req,res)=>{
+    let type = req.query.type;
+    let items = req.query.id;
+
+    if(type === "array"){
+        let ids = req.query.id.split(',');
+        items = [];
+        items = ids.map(item=>{
+            //push inside of array id of item and convert to object id
+            return mongoose.Types.ObjectId(item)
+        })
+    }
+
+    Product.
+    find({ '_id':{$in:items}}).
+    populate('company'). 
+    populate('grocery').
+    exec((err,docs)=>{
+        //find products by single item or id and send back the docs
+        return res.status(200).send(docs)
+    })
+})
+
+app.post('/api/product/article',auth,admin,(req,res)=>{
+    const product = new Product(req.body);
+
+    product.save((err,doc)=>{
+        if(err) return res.json({success:false,err});
+        res.status(200).json({
+            success: true,
+            article: doc
+        })
+    })
+})
+
+////////////////COMPANY///////////////
+
+app.post('/api/product/company',auth,admin,(req,res)=>{
+    const company = new Company(req.body);
+
+    company.save((err,doc)=>{
+        if(err) return res.json({success:false,err});
+        res.status(200).json({
+            success: true,
+            company: doc
+        })
+    })
+})
+
+app.get('/api/product/companies',(req,res)=>{
+    Company.find({},(err,companies)=>{
+        if(err) return res.status(400).send(err);
+        res.status(200).send(companies)
+    })
+})
+
+////////////////GROCERY///////////////
+
+app.post('/api/product/grocery',auth,admin,(req,res)=>{
+    const grocery = new Grocery(req.body);
+
+    grocery.save((err,doc)=>{
+        if(err) return res.json({success:false,err});
+        res.status(200).json({
+            success:true,
+            grocery: doc
+        })
+    })
+})
+
+app.get('/api/product/groceries',(req,res)=>{
+    Grocery.find({},(err,groceries)=>{
+        if(err) return res.status(400).send(err);
+        res.status(200).send(groceries)
+    })
+})
 
 ////////////////USERS/////////////////
 app.get('/api/users/auth',auth,(req,res)=>{
@@ -32,7 +115,7 @@ app.get('/api/users/auth',auth,(req,res)=>{
         name: req.user.name,
         lastname: req.user.lastname,
         role: req.user.role,
-        item: req.user.cart,
+        cart: req.user.cart,
         history: req.user.history
     })
 })
