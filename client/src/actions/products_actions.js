@@ -2,8 +2,7 @@ import axios from 'axios';
 import {
     GET_PRODUCTS_BY_SELL,
     GET_PRODUCTS_BY_ARRIVAL,
-    GET_GROCERIES,
-    GET_PRODUCTS
+    GET_GROCERIES
 } from './types';
 
 import { PRODUCT_SERVER } from '../components/utils/misc';
@@ -31,7 +30,6 @@ export function getProductsByArrival(){
     }
 }
 
-
 ////////////////////////////////////
 //////        CATEGORIES
 ////////////////////////////////////
@@ -47,14 +45,4 @@ export function getGroceries(){
         payload: request
     }
 
-}
-
-export function getProducts(){
-    const request = axios.get(`${PRODUCT_SERVER}/product`)
-    .then(response => response.data );
-
-    return {
-        type: GET_PRODUCTS,
-        payload: request
-    }
 }

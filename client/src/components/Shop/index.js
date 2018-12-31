@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PageTop from '../utils/page_top';
 
-import { stock,price } from '../utils/Form/fixed_categories';
+import { price } from '../utils/Form/fixed_categories';
 
 import { connect } from 'react-redux';
-import { getGroceries, getProducts } from '../../actions/products_actions';
+import { getGroceries } from '../../actions/products_actions';
 
 import CollapseCheckbox from '../utils/collapseCheckbox';
 import CollapseRadio from '../utils/collapseRadio';
@@ -17,14 +17,12 @@ class Shop extends Component {
         skip:0,
         filters:{
             groceries:[],
-            stock:[],
             price:[]
         }
     }
 
     componentDidMount(){
         this.props.dispatch(getGroceries());
-        this.props.dispatch(getProducts());
     }
 
     handlePrice = (value) => {
@@ -70,12 +68,6 @@ class Shop extends Component {
                                 title="Grocery"
                                 list={products.groceries}
                                 handleFilters={(filters)=> this.handleFilters(filters,'groceries')}
-                            />
-                            <CollapseCheckbox
-                                initState={false}
-                                title="Products"
-                                list={products.stock}
-                                handleFilters={(filters)=> this.handleFilters(filters,'stock')}
                             />
                              <CollapseRadio
                                 initState={true}

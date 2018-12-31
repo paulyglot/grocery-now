@@ -1,22 +1,3 @@
-const stock = [
-    {
-        "_id": 20,
-        "name": 20
-    },
-    {
-        "_id": 21,
-        "name": 21
-    },
-    {
-        "_id": 22,
-        "name": 22
-    },
-    {
-        "_id": 24,
-        "name": 24
-    },
-]
-
 const price = [
     {
         "_id":0,
@@ -52,6 +33,5 @@ const price = [
 
 
 export {
-    stock,
     price
 }
