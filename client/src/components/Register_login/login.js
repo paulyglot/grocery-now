@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import FormField from './FormField';
-import { update, generateData, isFormValid } from './FormActions';
+import FormField from '../utils/Form/formfield';
+import { update, generateData, isFormValid } from '../utils/Form/formActions';
 import { withRouter } from 'react-router-dom';
 
 import { connect } from 'react-redux';
-import { loginUser } from '../actions/user_actions';
+import { loginUser } from '../../actions/user_actions';
 
 class Login extends Component {
 
@@ -78,8 +78,6 @@ class Login extends Component {
                 formError: true
             })
         }
-   
-
     }
 
 

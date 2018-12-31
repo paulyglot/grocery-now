@@ -94,16 +94,6 @@ tr:nth-child(even) {
 }
 
 /*============================
-        PAGE TOP
-==============================*/
-
-.page_top {
-    border-bottom: 1px solid #999592;   
-    padding: 20px 0px;
-    text-transform: uppercase;
-}
-
-/*============================
             FORM
 ==============================*/
 
@@ -238,6 +228,7 @@ select {
     margin-top: 10px;
 }
 
+
 /*============================
         PAGE TOP
 ==============================*/
@@ -247,6 +238,7 @@ select {
     padding: 20px 0px;
     text-transform: uppercase;
 }
+
 
 /*============================
             HEADER
@@ -260,7 +252,7 @@ header {
 
 header .logo {
     font-family: 'Monoton', cursive;
-    color: #ffffff;
+    color: black;
     font-size: 40px;
     padding: 11px 0px;
 }
@@ -322,8 +314,6 @@ header .log_out_link {
 /*============================
             FOOTER
 ==============================*/
-
-
 
 footer .logo {
     text-align: center;
@@ -395,3 +385,4 @@ footer .business_nfo .nfo {
     font-size: 16px;
     width: 90%;
 }
+
