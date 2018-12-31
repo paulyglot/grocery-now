@@ -21,7 +21,8 @@ const Footer = () => {
                                 />
                                 <div className="nfo">
                                     <div>Address</div>
-                                    <div>555 San Juan Dr, Sunnyvale, CA</div>
+                                    <div>555 San Juan Dr</div>
+                                    <div>Sunnyvale, CA</div>
                                 </div>
                             </div>
                             <div className="tag">
