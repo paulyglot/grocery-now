@@ -11,20 +11,6 @@ const HomeSlider = (props) => {
             lineTwo:'No need to leave your home',
             linkTitle:'Shop now',
             linkTo:'/shop'
-        },
-        {
-            img:'/images/featured/slider2.jpg',
-            lineOne:'Shop from across the world',
-            lineTwo:'Awesome discounts',
-            linkTitle:'View offers',
-            linkTo:'/shop'
-        },
-        {
-            img:'/images/featured/slider1.jpg',
-            lineOne:'Cheapest online prices',
-            lineTwo:'PayPal checkout available',
-            linkTitle:'Secure shopping',
-            linkTo:'/shop'
         }
     ]
 
