@@ -11,9 +11,6 @@ class Header extends Component {
                         </div>
                     </div>
                     <div className="right">
-                        <div className="top">
-                            LINKS
-                        </div>
                         <div className="bottom">
                             LINKS
                         </div>

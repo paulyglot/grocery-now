@@ -8,6 +8,7 @@
     "@fortawesome/react-fontawesome": "0.0.20",
     "@material-ui/core": "^1.2.2",
     "axios": "^0.18.0",
+    "http-proxy-middleware": "^0.19.1",
     "moment": "^2.23.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -28,9 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },  
-  "proxy": "http://localhost:3002",
-  
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -39,5 +38,16 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
 }

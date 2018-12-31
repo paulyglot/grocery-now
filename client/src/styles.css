@@ -103,6 +103,150 @@ tr:nth-child(even) {
     text-transform: uppercase;
 }
 
+/*============================
+            FORM
+==============================*/
+
+input {
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+}
+
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+    background: #e1ddc3;
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+.error_label {
+    color: #F44336;
+    display:block;
+    font-size: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 51px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #d1d1d1;
+}
+
+.form_devider {
+    border-bottom: 3px solid #999592;
+    margin: 40px 0px;
+}
+
+.label_inputs {
+    display: inline-block;
+    background: #999592;
+    color: #fff;
+    padding: 5px 5px;
+}
+
+select {
+    font-size: 16px;
+    height: 38px;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+}
+.formBlock {
+    margin-bottom: 10px;
+}
+
+.form_block_two {
+    display:flex;
+}
+.form_block_two .block{
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.form_block_two .block:nth-child(1) {
+    padding-right:10px;
+}
+.form_block_two .block:nth-child(2) {
+    padding-left:10px;
+}
+
+.form_success {
+    background: #4CAF50;
+    color: #ffffffff;
+    padding: 10px;
+    display: block;
+}
+
+
+/*============================
+            BUTTONS
+==============================*/
+.link_default {
+    text-transform: uppercase;
+    padding: 10px;
+    display: table;
+    background: #e1ddc3;
+    margin-top: 10px;
+}
+
+.card_link,
+.bag_link,
+.add_to_cart_link {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    padding: 5px 10px;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #c3c0b1;
+    background: #f8f8f8;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+.card_link:hover,
+.bag_link:hover,
+.add_to_cart_link:hover {
+    background: #aaaaaa;
+    color: #ffff;
+}
+.add_to_cart_link {
+    color: #6b6b6b;
+    background: #d9d9d9;
+}
+.add_to_cart_link svg {
+    margin-right: 10px;
+}
+
+.action_button {
+    text-transform: uppercase;
+    padding: 10px;
+    display: table;
+    background: #e1ddc3;
+    margin-top: 10px;
+}
+
+/*============================
+        PAGE TOP
+==============================*/
+
+.page_top {
+    border-bottom: 1px solid #999592;   
+    padding: 20px 0px;
+    text-transform: uppercase;
+}
 
 /*============================
             HEADER
@@ -220,4 +364,34 @@ footer .business_nfo .nfo {
     padding-left: 40px;
 }
 
+/*=============================
+         REGISTER LOGIN
+===============================*/
 
+.register_login_container {
+    display: flex;
+    border: 1px solid #999592;
+    border-top: 5px solid #999592;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 80px 0px 110px 0px;
+    padding: 30px;
+    min-height: 430px;
+}
+
+.register_login_container .left,
+.register_login_container .right {
+    flex:1
+}
+
+.register_login_container h2 {
+    margin: 20px 0px;
+    text-transform: uppercase;
+    color: #686868;
+}
+
+.register_login_container p{
+    font-weight: 300;
+    font-size: 16px;
+    width: 90%;
+}
