@@ -1,7 +1,7 @@
 #### View the live app: https://whispering-caverns-60065.herokuapp.com/ 
 
 #### Technical Requirements
-The architecture must be split between a back-end and a web front-end, for instance, providing an in/out RESTful API in JSON. Feel free to use any other technologies, provided that the general client/service architecture is respected.
+>The architecture must be split between a back-end and a web front-end, for instance, providing an in/out RESTful API in JSON. Feel free to use any other technologies, provided that the general client/service architecture is respected.
 
 #### Functional Requirements
 >1. Save, Update, and Delete items to/from a database of your choosing
