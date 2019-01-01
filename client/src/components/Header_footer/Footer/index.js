@@ -42,7 +42,7 @@ const Footer = () => {
                                 />
                                 <div className="nfo">
                                     <div>Working hours</div>
-                                    <div>Mon-Sun/ 9am-8pm</div>
+                                    <div>Mon-Fri/ 8am-12am (dev hours)</div>
                                 </div>
                             </div>
                             <div className="tag">
@@ -52,16 +52,34 @@ const Footer = () => {
                                 />
                                 <div className="nfo">
                                     <div>Email</div>
-                                    <div>info@grocerynow.com</div>
+                                    <div>pabrower@icloud.com</div>
                                 </div>
                             </div>
                         </div>
                     </div> 
                     <div className="left">
-                        <h2>Be the first to know</h2>
+                        <h2>Get to know me</h2>
                         <div>
                             <div>
-                            Get all the latest information sales, subscribe to our mailing list!
+                            If you like this pseudo e-commerce app, then checkout my github profile for more:
+                            </div>
+                            <div>
+                            https://github.com/paulyglot
+                            </div>
+                            <br></br>
+                            <div>
+                             I am available for hire, please reach out to me at the email or phone number provided on the left 
+                            </div>
+                            <br></br>
+                            <div>
+                            If you'd like to get my resume, please visit my LinkedIn:
+                            </div>
+                            <div>
+                            https://www.linkedin.com/in/paul-brower
+                            </div>
+                            <br></br>
+                            <div>
+                            HACK THE PLANET!!!
                             </div>
                         </div>
                     </div>      
