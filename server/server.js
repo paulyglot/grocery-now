@@ -6,7 +6,7 @@ const cloudinary = require('cloudinary');
 
 const app = express();
 const mongoose = require('mongoose');
-const async = require('async');
+const async = require('async'); //make many requests to mongoose let's us know when done
 require('dotenv').config();
 
 mongoose.Promise = global.Promise;
