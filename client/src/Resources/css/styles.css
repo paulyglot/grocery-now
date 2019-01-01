@@ -1,7 +1,7 @@
 body {
     margin:0;
     padding:0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Amatic SC', cursive;
     color: #404040;
 }
 
@@ -78,7 +78,7 @@ a {
 }
 
 table {
-    font-family: arial, sans-serif;
+    font-family: 'Amatic SC', cursive;
     border-collapse: collapse;
     width: 100%;
 }
@@ -98,7 +98,7 @@ tr:nth-child(even) {
 ==============================*/
 
 input {
-    font-size: 15px;
+    font-size: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px 10px;
@@ -112,20 +112,20 @@ button {
     padding: 10px;
     background: #e1ddc3;
     margin-top: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
 }
 
 .error_label {
     color: #F44336;
     display:block;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 textarea {
     width: 100%;
     height: 51px;
-    font-size: 15px;
+    font-size: 25px;
     padding: 10px;
     box-sizing: border-box;
     margin-top: 5px;
@@ -145,7 +145,7 @@ textarea {
 }
 
 select {
-    font-size: 16px;
+    font-size: 25px;
     height: 38px;
     border: 1px solid #e9e9e9;
     border-radius: 3px;
@@ -199,7 +199,7 @@ select {
     display: block;
     box-sizing: border-box;
     text-align: center;
-    font-size: 14px;
+    font-size: 25px;
     text-transform: uppercase;
     color: #c3c0b1;
     background: #f8f8f8;
@@ -230,7 +230,7 @@ select {
 
 
 /*============================
-        PAGE TOP
+          PAGE TOP
 ==============================*/
 
 .page_top {
@@ -251,8 +251,9 @@ header {
 }
 
 header .logo {
-    font-family: 'Staatliches', cursive;
-    font-size: 43px;
+    font-family: 'Amatic SC', cursive;
+    color: #ffffff;
+    font-size: 60px;
     padding: 11px 0px;
 }
 
@@ -279,12 +280,12 @@ header .container .right .bottom {
     font-weight: 700;
     text-align: right;
     color:#ffffff;
-    font-size: 15px;
+    font-size: 25px;
     padding: 10px 20px;
 }
 
 header .container .right .top {
-    color:#c9c9c9;
+    color:#faf9f9;
     border-bottom: 1px solid #ffffff;
 }
 
@@ -301,7 +302,7 @@ header .cart_link span {
     left: -8px;
     border-radius: 50%;
     padding: 0px 7px 2px 7px;
-    font-size: 12px;
+    font-size: 20px;
 }
 header .log_out_link {
     cursor: pointer;
@@ -337,11 +338,12 @@ footer .business_nfo .tag {
 }
 footer .business_nfo .icon {
     position: absolute;
-    font-size: 26px;
+    font-size: 22px;
     top: 10px;
 }
 footer .business_nfo .nfo {
     padding-left: 40px;
+    font-size: 22px;
 }
 
 
@@ -357,9 +359,9 @@ footer .business_nfo .nfo {
 }
 
 .featured_container .featured_action {
-    position: absolute;
-    top: 45%;
-    left: 8%;
+    position: relative;
+    top: 25%;
+    left: 41%;
 }
 
 .featured_container .featured_action .tag {
@@ -381,6 +383,9 @@ footer .business_nfo .nfo {
     margin-top: 10px;
 }
 
+.featured_container .featured_action .shop_now_button {
+    font-size: 30px
+}
 /*============================
         FEATURED PROMOTION
 ==============================*/
@@ -417,6 +422,10 @@ footer .business_nfo .nfo {
 
 .home_promotion .my_link a {
     margin: 10px auto;
+}
+
+.home_promotion .shop_now_button {
+    font-size: 30px;
 }
 
 
@@ -604,7 +613,7 @@ footer .business_nfo .nfo {
 
 .product_detail_wrapper p {
     font-size: 17px;
-    font-family: Arial, Helvetica;
+    font-family: 'Amatic SC', cursive;
     font-weight: lighter;
 }
 
@@ -738,8 +747,12 @@ footer .business_nfo .nfo {
 
 .register_login_container p{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 30px;
     width: 90%;
+}
+
+.create_account_button {
+    font-size: 28px;
 }
 
 /*=============================
@@ -759,7 +772,7 @@ footer .business_nfo .nfo {
 .user_container .user_left_nav .links a {
     display: block;
     border-bottom: 1px solid #dddddd;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
     padding: 10px 0px;
     width: 280px;
@@ -786,7 +799,7 @@ footer .business_nfo .nfo {
 
 .user_container .user_nfo_panel span{
     display: block;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 300;
 }
 
@@ -849,7 +862,7 @@ footer .business_nfo .nfo {
 
 .brands_container .category_item {
     width: 200px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
     border: 1px solid #f1f1f1;
     padding: 10px;

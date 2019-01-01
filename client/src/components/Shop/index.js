@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import PageTop from '../utils/page_top';
 
-import { price } from '../utils/Form/fixed_categories';
+import { cases,price } from '../utils/Form/fixed_categories';
 
 import { connect } from 'react-redux';
-import { getGroceries } from '../../actions/products_actions';
+import { getProductsToShop ,getBrands, getCategories } from '../../actions/products_actions';
 
 import CollapseCheckbox from '../utils/collapseCheckbox';
 import CollapseRadio from '../utils/collapseRadio';
+
+import LoadmoreCards from './loadmoreCards';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faBars from '@fortawesome/fontawesome-free-solid/faBars';
+import faTh from '@fortawesome/fontawesome-free-solid/faTh';
+
 
 class Shop extends Component {
 
@@ -16,13 +22,22 @@ class Shop extends Component {
         limit:6,
         skip:0,
         filters:{
-            groceries:[],
+            brand:[],
+            cases:[],
+            category:[],
             price:[]
         }
     }
 
     componentDidMount(){
-        this.props.dispatch(getGroceries());
+        this.props.dispatch(getBrands());
+        this.props.dispatch(getCategories());
+
+        this.props.dispatch(getProductsToShop(
+            this.state.skip,
+            this.state.limit,
+            this.state.filters
+        ))
     }
 
     handlePrice = (value) => {
@@ -47,13 +62,47 @@ class Shop extends Component {
             newFilters[category] = priceValues
         }
 
+       this.showFilteredResults(newFilters)
        this.setState({
            filters: newFilters
        })
     }
 
+    showFilteredResults = (filters) =>{
+        this.props.dispatch(getProductsToShop(
+            0,
+            this.state.limit,
+            filters
+        )).then(()=>{
+            this.setState({
+                skip:0
+            })
+        })
+    }
+
+    loadMoreCards = () => {
+        let skip = this.state.skip + this.state.limit;
+
+        this.props.dispatch(getProductsToShop(
+            skip,
+            this.state.limit,
+            this.state.filters,
+            this.props.products.toShop
+        )).then(()=>{
+            this.setState({
+                skip
+            })
+        })
+    }
+
+    handleGrid= () =>{
+        this.setState({
+            grid: !this.state.grid ? 'grid_bars':''
+        })
+    }
+
+
     render() {
-        console.log(this.state.filters)
         const products = this.props.products;
         return (
             <div>
@@ -65,9 +114,21 @@ class Shop extends Component {
                         <div className="left">
                             <CollapseCheckbox
                                 initState={true}
-                                title="Grocery"
-                                list={products.groceries}
-                                handleFilters={(filters)=> this.handleFilters(filters,'groceries')}
+                                title="Brands"
+                                list={products.brands}
+                                handleFilters={(filters)=> this.handleFilters(filters,'brand')}
+                            />
+                             <CollapseCheckbox
+                                initState={false}
+                                title="Cases"
+                                list={cases}
+                                handleFilters={(filters)=> this.handleFilters(filters,'cases')}
+                            />
+                            <CollapseCheckbox
+                                initState={false}
+                                title="Category"
+                                list={products.categories}
+                                handleFilters={(filters)=> this.handleFilters(filters,'category')}
                             />
                              <CollapseRadio
                                 initState={true}
@@ -78,7 +139,31 @@ class Shop extends Component {
                            
                         </div>
                         <div className="right">
-                            right
+                            <div className="shop_options">
+                                <div className="shop_grids clear">
+                                    <div
+                                        className={`grid_btn ${this.state.grid?'':'active'}`}
+                                        onClick={()=> this.handleGrid()}
+                                    >
+                                        <FontAwesomeIcon icon={faTh}/>
+                                    </div>
+                                    <div
+                                        className={`grid_btn ${!this.state.grid?'':'active'}`}
+                                        onClick={()=> this.handleGrid()}
+                                    >
+                                        <FontAwesomeIcon icon={faBars}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style={{clear:'both'}}>
+                                <LoadmoreCards
+                                    grid={this.state.grid}
+                                    limit={this.state.limit}
+                                    size={products.toShopSize}
+                                    products={products.toShop}
+                                    loadMore={()=> this.loadMoreCards()}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

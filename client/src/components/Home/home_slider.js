@@ -6,9 +6,9 @@ const HomeSlider = (props) => {
 
     const slides = [
         {
-            img:'/images/featured/slider3.jpg',
-            lineOne:'Name Brands',
-            lineTwo:'No need to leave your home',
+            img:'/images/featured/featured_home.jpg',
+            lineOne:'Bulk Foods',
+            lineTwo:'Delivered to you',
             linkTitle:'Shop now',
             linkTo:'/shop'
         }
@@ -36,7 +36,7 @@ const HomeSlider = (props) => {
                         <div className="featured_action">
                             <div className="tag title">{item.lineOne}</div>
                             <div className="tag low_title">{item.lineTwo}</div>
-                            <div>
+                            <div className="shop_now_button">
                                 <MyButton
                                     type="default"
                                     title={item.linkTitle}

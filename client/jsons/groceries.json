@@ -1,0 +1,53 @@
+{
+    "_id" : ObjectId("5b2c11481470fbaecd159dfd"),
+    "name" : "Fresh Produce",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c11d2d37177aedfd6d962"),
+    "name" : "Meat",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c1216d37177aedfd6d963"),
+    "name" : "Dairy",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c1264d37177aedfd6d964"),
+    "name" : "Frozen Foods",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c1267d37177aedfd6d965"),
+    "name" : "Grains",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c12a1d37177aedfd6d966"),
+    "name" : "Cereal",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c12a4d37177aedfd6d967"),
+    "name" : "Pasta",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c132406cf65af3475d28e"),
+    "name" : "Health and beauty",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("5b2c171c357cb8b03cb04342"),
+    "name" : "Household",
+    "__v" : 0
+}

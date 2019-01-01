@@ -32,7 +32,7 @@ const Footer = () => {
                                 />
                                 <div className="nfo">
                                     <div>Phone</div>
-                                    <div>(408) 555-5555</div>
+                                    <div>(408) 368-3605</div>
                                 </div>
                             </div>
                             <div className="tag">
@@ -61,7 +61,7 @@ const Footer = () => {
                         <h2>Be the first to know</h2>
                         <div>
                             <div>
-                            Get all the latest information on sales and offers, you won't want to miss them!
+                            Get all the latest information sales, subscribe to our mailing list!
                             </div>
                         </div>
                     </div>      
