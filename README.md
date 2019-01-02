@@ -22,7 +22,7 @@
 
 ## Solution
 
->I decided to make my take-home project with the NERD tech stack (Node.js, Express.js, React/Redux.js, MongoDB).
+>I decided to make my take-home project with the NERD tech stack (Node.js, Express.js, React/Redux.js, MongoDB/mlab).
 
 >This included the traditional layout of the server and the client with their respective dependencies. For the client side I used create react app which created it’s own README and instructions for running locally. 
 
@@ -64,13 +64,20 @@
 
 ### Reason for NERD stack and middleware
 
->Lorem epsum ...
+>I chose React because working with the DOM API is difficult, and React gives us developers its Virtual DOM (React’s reconciliation algorithm) to work with making our lives easier, also I started learning React.js as my first framework and wanted to ensure my knowledge in it before moving onto learning another. 
+
+>Redux is the obvious go-to predictable state container for JS apps. My e-commerce app could grow to huge proportions if used in a real-world scenario, so I decided to use a state management tool as managing states shared across components becomes a chore. Redux also allows for components to internally manage their state without any need for an external library or tool.
+
+>Node is my choice of JS run time environment that executes my app's JS code outside of a browser. I have already implemented Node and Express together in previous apps and felt comfortable using these two again as they are hard to compete with. Express is actually a framework for Node, and has been the de facto server framework for Node as of recent, so this was an easy choice.
+
+>MongoDB was a great choice for this product, being that it is a cross-platform document-oriented database program and inherently stores your data in flexible JSON-like documents. This means fields can vary between documents and data structure can be changed over time. This was an obvious Yes for an e-commerce site which could change dramatically under new ownership etc. 
 
 ### Trade-offs made or things left to do 
 
 >include a forgot password component 
 
->incorporate Nodemailer or another third party app for sending signup email confirmations etc.
+>incorporate Nodemailer or Sendgrid for emailed confirmations and responses for forgotten passwords etc.
 
->to make the app ready for real-world application, a given business owner needs to be able to update the header/footer info; so continue to create a component which lets us edit the site's current info 
+>to make the app ready for real-world application, a given business owner needs to be able to update the header/footer info; so continue to create a component which lets us edit the site's current info
+
 
