@@ -38,7 +38,7 @@
 
 >items checked into their cart receive real time updates so multiple users can stay focused on what needs to be bought in this digital grocery store
 
->Enzyme and Jest testing (currently in progress)
+>Enzyme and Jest testing (currently in progress: missing as of now due to the enormous undertaking of creating this app, I didn't leave myself very much time for testing in the given window of time I was offered. I prioritized making a very fun and interactive shop application that I could bolster my professional portfolio with, and wouldn't have had the time for testing in the beginning of it's creation. I am now working on unit testing each of the client components in enzyme/jest)
 
 >deployed to Heroku for production
 
