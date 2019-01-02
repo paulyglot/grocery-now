@@ -62,7 +62,7 @@
 
 >Grocery Category admin creation functionality (add new categories i.e. snacks, meals, beverages etc.)
 
-### Reason for NERD stack and middleware
+### Reason for NERD stack and other technical choices
 
 >I chose React because working with the DOM API is difficult, and React gives us developers its Virtual DOM (React’s reconciliation algorithm) to work with making our lives easier, also I started learning React.js as my first framework and wanted to ensure my knowledge in it before moving onto learning another. 
 
@@ -71,6 +71,10 @@
 >Node is my choice of JS run time environment that executes my app's JS code outside of a browser. I have already implemented Node and Express together in previous apps and felt comfortable using these two again as they are hard to compete with. Express is actually a framework for Node, and has been the de facto server framework for Node as of recent, so this was an easy choice.
 
 >MongoDB was a great choice for this product, being that it is a cross-platform document-oriented database program and inherently stores your data in flexible JSON-like documents. This means fields can vary between documents and data structure can be changed over time. This was an obvious Yes for an e-commerce site which could change dramatically under new ownership etc. 
+
+>Cloudinary was a great SaaS which enabled me to manage my web media assets with their leading cloud service. This means I am able to give admin's on my app the ability to add their own products to the database and upload their own images for them too!
+
+>react-dropzone: easy drag and drop file uploading for admin tools, react-paypal-express-checkout: allowed me to connect PayPal to my account (unfortunately I had to upgrade my PayPal account to Business and this seemed kinda weird), but thankfully Paypal has amazing developer page with easy Sanbox integration and fake account etc., enzyme: for testing with Jest in React, makes it easy to look at snapshots etc, bcrypt: encrypting passwords for secure user signup/login, dotenv: makes .env available in server.js, axios: a reliable promise-based HTTP client which provides a single API for dealing with XMLHttpRequest s and node's http interface and wraps the requests using a polyfill for ES6 new's promise syntax, moment: for parsing and displaying dates 
 
 ### Trade-offs made or things left to do 
 
