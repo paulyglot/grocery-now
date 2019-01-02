@@ -74,9 +74,11 @@
 
 >Cloudinary was a great SaaS which enabled me to manage my web media assets with their leading cloud service. This means I am able to give admin's on my app the ability to add their own products to the database and upload their own images for them too!
 
->react-dropzone: easy drag and drop file uploading for admin tools, react-paypal-express-checkout: allowed me to connect PayPal to my account (unfortunately I had to upgrade my PayPal account to Business and this seemed kinda weird), but thankfully Paypal has amazing developer page with easy Sanbox integration and fake account etc., enzyme: for testing with Jest in React, makes it easy to look at snapshots etc, bcrypt: encrypting passwords for secure user signup/login, dotenv: makes .env available in server.js, axios: a reliable promise-based HTTP client which provides a single API for dealing with XMLHttpRequest s and node's http interface and wraps the requests using a polyfill for ES6 new's promise syntax, moment: for parsing and displaying dates 
+>react-dropzone: easy drag and drop file uploading for admin tools, react-paypal-express-checkout: allowed me to connect PayPal to my account (unfortunately I had to upgrade my PayPal account to Business and this seemed kinda weird), but thankfully Paypal has amazing developer page with easy Sanbox integration and fake account etc., enzyme: for testing with Jest in React, makes it easy to look at snapshots etc, bcrypt: encrypting passwords for secure user signup/login, dotenv: makes .env available in server.js, axios: a reliable promise-based HTTP client which provides a single API for dealing with XMLHttpRequest s and node's http interface and wraps the requests using a polyfill for ES6 new's promise syntax, moment: for parsing and displaying dates, material ui: a very popular React UI framework which made for quick and effective UI/UX given the time I had for this project. 
 
 ### Trade-offs made or things left to do 
+
+>improve the UI/UX a bit with a possible Google Font change (sometimes appears a bit blurry on a given monitor); some slight padding in the shop/cart/admin components (a little too close to the top)
 
 >include a forgot password component 
 
