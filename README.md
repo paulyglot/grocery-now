@@ -30,17 +30,17 @@
 
 ### Client-side minimum requirements met
 
->save, update and delete items to from mlab MongoDB in production 
+>*save, update and delete items to from mlab MongoDB in production* 
 
->authenticate users (same user can sign into different devices) 
+>*authenticate users (same user can sign into different devices)*
 
->live shopping cart to allow add, edit and delete (for multiple user functionality) 
+>*live shopping cart to allow add, edit and delete (for multiple user functionality)* 
 
->items checked into their cart receive real time updates so multiple users can stay focused on what needs to be bought in this digital grocery store
+>*items checked into their cart receive real time updates so multiple users can stay focused on what needs to be bought in this digital grocery store*
 
->enzyme and Jest testing (currently in progress: missing as of now due to the enormous undertaking of creating this app, I didn't leave myself very much time for testing in the given window of time I was offered. I prioritized making a very fun and interactive shop application that I could bolster my professional portfolio with, and wouldn't have had the time for testing in the beginning of it's creation. I am now working on unit testing each of the client components in enzyme/jest)
+>*enzyme and Jest testing (currently in progress: missing as of now due to the enormous undertaking of creating this app, I didn't leave myself very much time for testing in the given window of time I was offered. I prioritized making a very fun and interactive shop application that I could bolster my professional portfolio with, and wouldn't have had the time for testing in the beginning of it's creation. I am now working on unit testing each of the client components in enzyme/jest)*
 
->deployed to Heroku for production
+>*deployed to Heroku for production*
 
 ### Client-side bonus features met
 
@@ -74,7 +74,7 @@
 
 >Cloudinary was a great SaaS which enabled me to manage my web media assets with their leading cloud service. This means I am able to give admin's on my app the ability to add their own products to the database and upload their own images for them too!
 
->Middlewares include -> react-dropzone: easy drag and drop file uploading for admin tools, react-paypal-express-checkout: allowed me to connect PayPal to my account (unfortunately I had to upgrade my PayPal account to Business and this seemed kinda weird), but thankfully Paypal has amazing developer page with easy Sanbox integration and fake account etc.; enzyme/Jest: for testing in React, makes it easy to look at snapshots etc; bcrypt: encrypting passwords for secure user signup/login; dotenv: makes .env available in server.js, axios; a reliable promise-based HTTP client which provides a single API for dealing with XMLHttpRequests and Node's http interface and wraps the requests using a polyfill for ES6 new's promise syntax; moment: for parsing and displaying dates, material ui; a very popular React UI framework which made for quick and effective UI/UX given the time I had for this project; postman: for comprehensive API development, worked very well paired with MongoDB and my models created on server-side; http-proxy-middleware: for that pesky 404 error you get when your proxy settings are whack; concurrently: running multiple commands concurrently (ie. running both client-side and server-side together within commandline; body-parser: extract the entire body portion of an incoming request stream and exposes it on req.body (used in conjunction with Express.js); cookie-parser: allowed me to parse Cookie header etc.; jsonwebtoken: creating access tokens that assert some number of claims (like user is admin etc.); multer: image uploading.
+>Middlewares include -> **react-dropzone**: easy drag and drop file uploading for admin tools, **react-paypal-express-checkout**: allowed me to connect PayPal to my account (unfortunately I had to upgrade my PayPal account to Business and this seemed kinda weird), but thankfully Paypal has amazing developer page with easy Sandbox integration and fake account etc.; **enzyme/Jest**: for testing in React, makes it easy to look at snapshots etc; **bcrypt**: encrypting passwords for secure user signup/login; **dotenv**: makes .env available in server.js, **axios**; a reliable promise-based HTTP client which provides a single API for dealing with XMLHttpRequests and Node's http interface and wraps the requests using a polyfill for ES6 new's promise syntax; **moment**: for parsing and displaying dates, **material ui**; a very popular React UI framework which made for quick and effective UI/UX given the time I had for this project; **postman**: for comprehensive API development, worked very well paired with MongoDB and my models created on server-side; **http-proxy-middleware**: for that pesky 404 error you get when your proxy settings are whack; **concurrently**: running multiple commands concurrently (ie. running both client-side and server-side together within commandline; **body-parser**: extract the entire body portion of an incoming request stream and exposes it on req.body; **cookie-parser**: allowed me to parse Cookie header etc.; **jsonwebtoken**: creating access tokens that assert some number of claims (like user is admin etc.); **multer**: image uploading.
 
 ### Trade-offs made or things left to do 
 
