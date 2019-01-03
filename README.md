@@ -22,7 +22,7 @@
 
 ## Solution
 
-I decided to make my take-home project with the NERD tech stack (Node.js, Express.js, React/Redux.js, MongoDB/mlab/mongoose).
+I decided to make my take-home project with the NERD tech stack (Node.js, Express.js, React/Redux.js, MongoDB/Studio 3T).
 
 This included the traditional layout of the server and the client with their respective dependencies. For the client side I used create react app which created it’s own README and instructions for running locally. 
 
