@@ -15,11 +15,11 @@ module.exports = GridFSBucketReadStream;
  * @param {Collection} files Handle for files collection
  * @param {Object} readPreference The read preference to use
  * @param {Object} filter The query to use to find the file document
- * @param {Object} [options=null] Optional settings.
- * @param {Number} [options.sort=null] Optional sort for the file find query
- * @param {Number} [options.skip=null] Optional skip for the file find query
- * @param {Number} [options.start=null] Optional 0-based offset in bytes to start streaming from
- * @param {Number} [options.end=null] Optional 0-based offset in bytes to stop streaming before
+ * @param {Object} [options] Optional settings.
+ * @param {Number} [options.sort] Optional sort for the file find query
+ * @param {Number} [options.skip] Optional skip for the file find query
+ * @param {Number} [options.start] Optional 0-based offset in bytes to start streaming from
+ * @param {Number} [options.end] Optional 0-based offset in bytes to stop streaming before
  * @fires GridFSBucketReadStream#error
  * @fires GridFSBucketReadStream#file
  * @return {GridFSBucketReadStream} a GridFSBucketReadStream instance.
@@ -234,13 +234,12 @@ function doRead(_this) {
       _this.s.bytesToSkip = 0;
     }
 
-    if (expectedN === _this.s.expectedEnd && _this.s.bytesToTrim != null) {
-      sliceEnd = _this.s.bytesToTrim;
-    }
-
-    // If the remaining amount of data left is < chunkSize read the right amount of data
-    if (_this.s.options.end && _this.s.options.end - _this.s.bytesToSkip < buf.length) {
-      sliceEnd = _this.s.options.end - _this.s.bytesToSkip;
+    const atEndOfStream = expectedN === _this.s.expectedEnd - 1;
+    const bytesLeftToRead = _this.s.options.end - _this.s.bytesToSkip;
+    if (atEndOfStream && _this.s.bytesToTrim != null) {
+      sliceEnd = _this.s.file.chunkSize - _this.s.bytesToTrim;
+    } else if (_this.s.options.end && bytesLeftToRead < doc.data.length()) {
+      sliceEnd = bytesLeftToRead;
     }
 
     if (sliceStart != null || sliceEnd != null) {
