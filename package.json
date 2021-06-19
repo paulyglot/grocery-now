@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/paulyglot/grocery-list#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.18.3",
     "cloudinary": "^1.11.0",
     "concurrently": "^3.6.0",
